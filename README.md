@@ -1,6 +1,10 @@
+## Step 1: Install Required Software
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 45bd6ec1f345e5e24385b0bab32a5348893c0f7c
 - Download and install **PyCharm** from the [official website](https://www.jetbrains.com/pycharm/download/).
 - Download and install **Git** from the [official website](https://git-scm.com/downloads).
 
@@ -112,5 +116,9 @@ Here is a quick explanation of the data
 | etime | seconds | Timestamp of the data point in seconds |
 | spo2 | % | blood oxygen level |
 
+<<<<<<< HEAD
 **That's it! You've successfully configured and run the script in PyCharm for the Verisense Health's dsci_algorithms_python repository.**
 >>>>>>> 3fa9cdd (Update README.md)
+=======
+**That's it! You've successfully configured and run the script in PyCharm for the Verisense Health's aws-s3-file-downloader repository.**
+>>>>>>> 45bd6ec1f345e5e24385b0bab32a5348893c0f7c
