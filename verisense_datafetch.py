@@ -1,14 +1,31 @@
 from PIL import Image, ImageTk
 import time
 from tkinter.font import Font
+from pathlib import Path
 import tkinter as tk
 from download_data_demo import download_data
 from tkcalendar import DateEntry
 from tkinter import ttk
 import threading
+"""
+CONFIDENTIAL
+__________________
+2023 Verisense Health Inc.
+All Rights Reserved.
+NOTICE:  All information contained herein is, and remains
+the property of Verisense Health Incorporated and its suppliers,
+if any.  The intellectual and technical concepts contained
+herein are proprietary to Verisense Health Incorporated
+and its suppliers and may be covered by U.S. and Foreign Patents,
+patents in process, and are protected by trade secret or copyright law.
+Dissemination of this information or reproduction of this material
+is strictly forbidden unless prior written permission is obtained
+from Verisense Health Incorporated.
+Authors: Lucas Selig <lselig@verisense.net>
+"""
 
 
-class MyApp:
+class VerisenseDatafetch:
     def __init__(self, root):
         self.root = root
         self.root.title("Verisense DataFetch")
@@ -45,7 +62,7 @@ class MyApp:
         self.data_output_folder_label = ttk.Label(config_frame, text='Data Output Folder: ', font = medium_font)
         self.data_output_folder_label.grid(row = 4, column = 0,  padx = 5, pady = 5)
 
-        output_folder_default_text = tk.StringVar(value="/Users/lselig/Desktop/Desktop/dsci_algorithms_python/data_parallel")
+        output_folder_default_text = tk.StringVar(value="/Users/lselig/Desktop/VerisenseData")
         self.output_folder_entry = tk.Entry(config_frame, textvariable=output_folder_default_text)
         self.output_folder_entry.grid(row = 5, column = 0,  padx = 5, pady = 5)
 
@@ -139,16 +156,13 @@ def center_screen(root):
 if __name__ == "__main__":
 
     root = tk.Tk()
-    # Pack a big frame so, it behaves like the window background
     big_frame = ttk.Frame(root)
-    # big_frame.grid(row = 0, column = 0, fill="both", expand=True)
-    # Set the initial theme
     root.tk.call("source", "azure.tcl")
     root.tk.call("set_theme", "light")
 
     style = ttk.Style(root)
-    background_image = Image.open('/Users/lselig/dsci_algorithms_python/assets/gradient_with_small_logo.png')
-    # background_image = background_image.resize((1200, 500), Image.ANTIALIAS)
+    image_path = Path.cwd() / 'assets' / 'gradient_with_small_logo.png'
+    background_image = Image.open(image_path)
     background_photo = ImageTk.PhotoImage(background_image)
 
     # Set the background label to hold the image
@@ -186,7 +200,5 @@ if __name__ == "__main__":
     derived_signal_frame = ttk.Frame(root, style="TFrame")
     derived_signal_frame.grid(row=1, column=2, padx=20, pady=20)
 
-    app = MyApp(root)
-    # sv_ttk.set_theme("light")
+    app = VerisenseDatafetch(root)
     root.mainloop()
-    # root.destroy()

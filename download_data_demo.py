@@ -4,6 +4,22 @@ from datetime import datetime
 from pathlib import Path
 from parse_signals import *
 from concurrent.futures import ThreadPoolExecutor, ProcessPoolExecutor
+"""
+CONFIDENTIAL
+__________________
+2023 Verisense Health Inc.
+All Rights Reserved.
+NOTICE:  All information contained herein is, and remains
+the property of Verisense Health Incorporated and its suppliers,
+if any.  The intellectual and technical concepts contained
+herein are proprietary to Verisense Health Incorporated
+and its suppliers and may be covered by U.S. and Foreign Patents,
+patents in process, and are protected by trade secret or copyright law.
+Dissemination of this information or reproduction of this material
+is strictly forbidden unless prior written permission is obtained
+from Verisense Health Incorporated.
+Authors: Lucas Selig <lselig@verisense.net>
+"""
 sns.set_style("darkgrid")
 
 def plot_signal(combined_out_path, use_datetimes):
