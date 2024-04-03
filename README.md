@@ -68,7 +68,49 @@ S3_BUCKET = 'verisense-1d2677bd-c22f-49ec-b4db-1b4c1ee90e5e'
 8. Use the checkboxes to select the signals you are interested in downloading.
 ## Step 8: View the Output
 
-After running the script, you should see concatenated data for various signals in the specified `COMBINED_OUT_PATH/Parsed` directory as mentioned in the script's output. You can access and analyze the results from this directory.
+After running the script, you should see concatenated data for various signals in your specified directory. You can access and analyze the results from this directory.
+
+## Step 9: Data Formats
+
+Here is a quick explanation of the data
+
+### Acceleration
+| Column | Unit | Notes |
+| --- | --- | --- |
+| etime | seconds | Timestamp of the data point in seconds |
+| x | g | x-axis of acceleration |
+| y | g | y-axis of acceleration |
+| z | g | z-axis of acceleration |
+
+### Green PPG
+| Column | Unit | Notes |
+| --- | --- | --- |
+| etime | seconds | Timestamp of the data point in seconds |
+| green | A.U | green PPG |
+
+### Red PPG
+| Column | Unit | Notes |
+| --- | --- | --- |
+| etime | seconds | Timestamp of the data point in seconds |
+| red | A.U | red PPG |
+
+### Temperature
+| Column | Unit | Notes |
+| --- | --- | --- |
+| etime | seconds | Timestamp of the data point in seconds |
+| temperature | C | wrist temperature |
+
+### Heart Rate
+| Column | Unit | Notes |
+| --- | --- | --- |
+| etime | seconds | Timestamp of the data point in seconds |
+| bpm | beats per minute | heart rate |
+
+### Blood Oxygen Level
+| Column | Unit | Notes |
+| --- | --- | --- |
+| etime | seconds | Timestamp of the data point in seconds |
+| spo2 | % | blood oxygen level |
 
 **That's it! You've successfully configured and run the script in PyCharm for the Verisense Health's dsci_algorithms_python repository.**
 >>>>>>> 3fa9cdd (Update README.md)
