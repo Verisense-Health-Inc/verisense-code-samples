@@ -60,6 +60,7 @@ S3_BUCKET = 'verisense-1d2677bd-c22f-49ec-b4db-1b4c1ee90e5e'
 3. This will open a GUI application.
 
 <img width="804" alt="Screen Shot 2024-04-03 at 11 44 07 AM" src="https://github.com/Verisense-Health-Inc/aws-s3-file-downloader/assets/162383276/bbe20c97-3913-415a-adf6-53da2105da70">
+
 4. For participant ID enter the participant ID.
 5. For device ID enter the 12 character bluetooth ID.
 6. For the output folder enter a valid folder on your computer where you wish to have the data downloaded to (no slash at the end).
