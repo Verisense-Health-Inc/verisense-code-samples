@@ -111,4 +111,4 @@ Here is a quick explanation of the data
 | etime | seconds | Timestamp of the data point in seconds |
 | spo2 | % | blood oxygen level |
 
-**That's it! You've successfully configured and run the script in PyCharm for the Verisense Health's dsci_algorithms_python repository.**
+**That's it! You've successfully configured and run the script in PyCharm for the Verisense Health's aws-s3-file-downloader repository.**
