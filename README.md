@@ -25,14 +25,14 @@ https://github.com/Verisense-Health-Inc/aws-s3-file-downloader.git
 ## Step 4: Open the Repository in PyCharm
 
 1. Open PyCharm.
-2. Go to **File > Open** and navigate to the `dsci_algorithms_python` directory that you just cloned. Click "Open."
+2. Go to **File > Open** and navigate to the `aws-s3-file-downloader` directory that you just cloned. Click "Open."
 3. PyCharm may ask you to "Attach" and "Trust Project." Confirm these actions.
 
 ## Step 5: Install Required Dependencies
 
 In the PyCharm interface:
 
-1. Make sure you have the `dsci_algorithms_python` project selected in the left panel.
+1. Make sure you have the `aws-s3-file-downloader` project selected in the left panel.
 2. Choose **View > Tool Windows > Terminal** to open a terminal window within PyCharm.
 3. Run the following command to install project requirements:
 
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 
 ## Step 6: Create and Configure the .env and Script Parameters
 
-1. Right-click on the `dsci_algorithms_python` project in the left panel.
+1. Right-click on the `aws-s3-file-downloader` project in the left panel.
 2. Choose **New > File** and name it `.env` (without quotes).
 3. Inside the `.env` file, add the following lines and replace them with your temporary or read-only access keys from the bitwarden link and configure the parameters according to your desired settings. Here's an example configuration:
 
@@ -50,16 +50,20 @@ pip install -r requirements.txt
 AWS_ACCESS_KEY="AKIAIOSFODNN7EXAMPLE"
 AWS_SECRET_KEY="wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
 S3_BUCKET = 'verisense-1d2677bd-c22f-49ec-b4db-1b4c1ee90e5e'
-PARTICIPANT = "PL01"
-DEVICE_MAC_ID = "04020205FDCC"
-DATA_AFTER = "240401"
 ```
 
-## Step 7: Run the download_data_parallel.py Script
+## Step 7: Run the verisense_datafetch.py Script
 
 1. In PyCharm, make sure the above script is open.
 2. Locate the "Run" button in the PyCharm interface (typically a green triangle or "Play" button) and press it.
+3. This will open a GUI application.
 
+<img width="804" alt="Screen Shot 2024-04-03 at 11 44 07 AM" src="https://github.com/Verisense-Health-Inc/aws-s3-file-downloader/assets/162383276/bbe20c97-3913-415a-adf6-53da2105da70">
+4. For participant ID enter the participant ID.
+5. For device ID enter the 12 character bluetooth ID.
+6. For the output folder enter a valid folder on your computer where you wish to have the data downloaded to (no slash at the end).
+7. For data begin and data end use the dropdowns (may have to double click) to select the date range for your data.
+8. Use the checkboxes to select the signals you are interested in downloading.
 ## Step 8: View the Output
 
 After running the script, you should see concatenated data for various signals in the specified `COMBINED_OUT_PATH/Parsed` directory as mentioned in the script's output. You can access and analyze the results from this directory.
