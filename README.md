@@ -62,7 +62,7 @@ S3_BUCKET = 'verisense-1d2677bd-c22f-49ec-b4db-1b4c1ee90e5e'
 
 4. For participant ID enter the participant ID.
 5. For device ID enter the 12 character bluetooth ID.
-6. For the output folder enter a valid folder on your computer where you wish to have the data downloaded to (no slash at the end).
+6. For the output folder enter a valid folder on your computer where you wish to have the data downloaded to.  Please ensure that your download path does not include quotations.
    - For windows an example filepath would look like `C:/Users/username/Documents`
    - For mac and linux an example file path would look like `/Users/username/Documents`
 8. For data begin and data end use the dropdowns (may have to double click) to select the date range for your data.
