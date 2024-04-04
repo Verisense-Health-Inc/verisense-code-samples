@@ -63,15 +63,19 @@ S3_BUCKET = 'verisense-1d2677bd-c22f-49ec-b4db-1b4c1ee90e5e'
 4. For participant ID enter the participant ID.
 5. For device ID enter the 12 character bluetooth ID.
 6. For the output folder enter a valid folder on your computer where you wish to have the data downloaded to (no slash at the end).
-7. For data begin and data end use the dropdowns (may have to double click) to select the date range for your data.
-8. Use the checkboxes to select the signals you are interested in downloading.
+   - For windows an example filepath would look like `C:/Users/username/Documents`
+   - For mac and linux an example file path would look like `/Users/username/Documents`
+8. For data begin and data end use the dropdowns (may have to double click) to select the date range for your data.
+9. Use the checkboxes to select the signals you are interested in downloading.
 ## Step 8: View the Output
 
-After running the script, you should see concatenated data for various signals in your specified directory. You can access and analyze the results from this directory.
+After running the script, you should see concatenated data for various signals in your specified directory under the `Parsed` folder. You can access and analyze the results from this directory.
+
+Please be aware that the data access tool uses a local cache.  This means that if you utilize the data access tool many times with the same output location, files that have been downloaded in the past will be skipped in the future.  This is why we suggest to keep your output location consistent.
 
 ## Step 9: Data Formats
 
-Here is a quick explanation of the data
+Here is a quick explanation of the data:
 
 ### Acceleration
 | Column | Unit | Notes |
