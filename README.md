@@ -1,5 +1,6 @@
 ## Step 1: Install Required Software
 
+We will need some things to be able to run the data access tool.  We reccommend PyCharm for ease of use, but if you have your own prefered text editor/IDE please feel free to use those.
 - Download and install **PyCharm** from the [official website](https://www.jetbrains.com/pycharm/download/).
 - Download and install **Git** from the [official website](https://git-scm.com/downloads).
 
