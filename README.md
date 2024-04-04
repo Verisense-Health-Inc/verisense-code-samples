@@ -19,7 +19,7 @@
 Open your terminal or command prompt and run the following command to clone the Verisense Health GitHub repository:
 
 ```bash
-https://github.com/Verisense-Health-Inc/aws-s3-file-downloader.git
+git clone https://github.com/Verisense-Health-Inc/aws-s3-file-downloader.git
 ```
 
 ## Step 4: Open the Repository in PyCharm
