@@ -20,30 +20,31 @@ We will need some things to be able to run the data access tool.  We recommend P
 Open your terminal or command prompt and run the following command to clone the Verisense Health GitHub repository:
 
 ```bash
-git clone https://github.com/Verisense-Health-Inc/aws-s3-file-downloader.git
+git clone https://github.com/Verisense-Health-Inc/verisense-code-samples.git
 ```
 
 ## Step 4: Open the Repository in PyCharm
 
 1. Open PyCharm.
-2. Go to **File > Open** and navigate to the `aws-s3-file-downloader` directory that you just cloned. Click "Open."
+2. Go to **File > Open** and navigate to the `verisense-code-samples` directory that you just cloned. Click "Open."
 3. PyCharm may ask you to "Attach" and "Trust Project." Confirm these actions.
 
 ## Step 5: Install Required Dependencies
 
 In the PyCharm interface:
 
-1. Make sure you have the `aws-s3-file-downloader` project selected in the left panel.
+1. Make sure you have the `verisense-code-samples` project selected in the left panel.
 2. Choose **View > Tool Windows > Terminal** to open a terminal window within PyCharm.
 3. Run the following command to install project requirements:
 
 ```bash
+cd s3-data-access-example
 pip install -r requirements.txt
 ```
 
 ## Step 6: Create and Configure the .env and Script Parameters
 
-1. Right-click on the `aws-s3-file-downloader` project in the left panel.
+1. Right-click on the `verisense-code-samples/s3-data-access-example` directory in the left panel.
 2. Choose **New > File** and name it `.env` (without quotes).
 3. Inside the `.env` file, add the following lines and replace them with your temporary or read-only access keys from the bitwarden link and configure the parameters according to your desired settings. Here's an example configuration:
 
@@ -59,7 +60,7 @@ S3_BUCKET = 'verisense-1d2677bd-c22f-49ec-b4db-1b4c1ee90e5e'
 2. Locate the "Run" button in the PyCharm interface (typically a green triangle or "Play" button) and press it.
 3. This will open a GUI application.
 
-<img width="804" alt="Screen Shot 2024-04-03 at 11 44 07 AM" src="https://github.com/Verisense-Health-Inc/aws-s3-file-downloader/assets/162383276/bbe20c97-3913-415a-adf6-53da2105da70">
+<img width="804" alt="Screen Shot 2024-04-03 at 11 44 07 AM" src="https://github.com/Verisense-Health-Inc/verisense-code-samples/s3-data-access-example/assets/162383276/bbe20c97-3913-415a-adf6-53da2105da70">
 
 4. For participant ID enter the participant ID.
 5. For device ID enter the 12 character bluetooth ID.
@@ -116,4 +117,4 @@ Here is a quick explanation of the data:
 | etime | seconds | Timestamp of the data point in seconds |
 | spo2 | % | blood oxygen level |
 
-**That's it! You've successfully configured and run the script in PyCharm for the Verisense Health's aws-s3-file-downloader repository.**
+**That's it! You've successfully configured and run the script in PyCharm for the Verisense Health's verisense-code-samples repository.**
