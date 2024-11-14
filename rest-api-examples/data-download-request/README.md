@@ -67,6 +67,7 @@ The script performs the following tasks sequentially:
 ## Important Notes
 - Make sure your `base_url`, `email`, and `password` are correct to successfully authenticate with the VTS API.
 - The script checks the download request status every 5 seconds until the data is ready.
+- The downloaded file is a `.tar` file, which can be opened using 7zip or a similar tool.
 - This is a basic example of handling API requests and responses. Depending on the API's response, you may need to adjust the script to handle different error messages or response formats.
 
 ## Disclaimer

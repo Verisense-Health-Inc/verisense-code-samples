@@ -8,6 +8,7 @@ password = "password123"  # Replace with your login password
 start_date = "2024-11-01"  # Replace with your desired start date
 end_date = "2024-11-05"  # Replace with your desired end date
 email_for_data = "email@email.com"  # Replace with the email to receive the data
+downloaded_filename = "downloaded_file.tar"  # Replace with the name of the downloaded file - keep the .tar extension
 
 
 def authenticate():
@@ -75,9 +76,7 @@ def check_download_status(token, request_id):
 def download_file(download_url):
     response = requests.get(download_url)
     if response.status_code == 200:
-        file_name = (
-            "downloaded_data.zip"  # or extract file name from headers if available
-        )
+        file_name = downloaded_filename
         with open(file_name, "wb") as file:
             file.write(response.content)
         print(f"Data downloaded successfully as {file_name}")
