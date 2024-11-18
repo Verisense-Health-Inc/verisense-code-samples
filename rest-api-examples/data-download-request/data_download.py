@@ -53,7 +53,6 @@ def check_download_status(token, request_id):
     while True:
         response = requests.post(status_url, json=payload)
         response_data = response.json()
-
         if response.status_code == 200 and response_data.get("isSuccess"):
             status = response_data["entity"]["status"]
             if status == "Completed":
@@ -74,12 +73,29 @@ def check_download_status(token, request_id):
 
 
 def download_file(download_url):
-    response = requests.get(download_url)
+    response = requests.get(download_url, stream=True)
     if response.status_code == 200:
+        total_size = int(response.headers.get("content-length", 0))
+        total_size_mb = total_size / (1024 * 1024)  # Convert bytes to megabytes
         file_name = downloaded_filename
+        chunk_size = 1024  # 1 KB per chunk
+        progress = 0
+
+        print(f"Total file size: {total_size_mb:.2f} MB")
+
         with open(file_name, "wb") as file:
-            file.write(response.content)
-        print(f"Data downloaded successfully as {file_name}")
+            for chunk in response.iter_content(chunk_size=chunk_size):
+                if chunk:  # Filter out keep-alive new chunks
+                    file.write(chunk)
+                    progress += len(chunk)
+                    percentage = (progress / total_size) * 100
+                    downloaded_mb = progress / (1024 * 1024)  # Convert bytes to MB
+                    print(
+                        f"\rDownloading... {downloaded_mb:.2f} MB / {total_size_mb:.2f} MB ({percentage:.2f}%)",
+                        end="",
+                    )
+
+        print(f"\nData downloaded successfully as {file_name}")
     else:
         print("Failed to download the file. Status code:", response.status_code)
 
@@ -89,6 +105,7 @@ token = authenticate()
 if token:
     request_id = request_data_download(token)
     if request_id:
+        time.sleep(2)
         download_url = check_download_status(token, request_id)
         if download_url:
             download_file(download_url)
